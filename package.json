@@ -2,7 +2,7 @@
   "name": "gesturecontrol",
   "displayName": "GestureControl",
   "description": "Aqlli qo'l harakatlari orqali boshqaruv markazi — Desktop dastur",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist-electron/main.js",
   "scripts": {
