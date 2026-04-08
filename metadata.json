@@ -1,0 +1,5 @@
+{
+  "name": "GestureControl - Aqlli Qo'l Harakatlari Boshqaruvi",
+  "description": "Kamera orqali qo'l harakatlarini aniqlaydigan va kompyuterni boshqaradigan zamonaviy interfeys.",
+  "requestFramePermissions": ["camera"]
+}
