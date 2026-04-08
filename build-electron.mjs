@@ -11,9 +11,12 @@ if (!fs.existsSync(distElectronDir)) {
   fs.mkdirSync(distElectronDir, { recursive: true });
 }
 
-const files = ['electron/main.ts', 'electron/preload.ts'];
+const files = [
+  { file: 'electron/main.ts', format: 'esm' },      // Main process: ESM
+  { file: 'electron/preload.ts', format: 'cjs' },   // Preload: CommonJS
+];
 
-files.forEach(file => {
+files.forEach(({ file, format }) => {
   const filePath = path.join(__dirname, file);
   const outfile = path.join(distElectronDir, path.basename(file, '.ts') + '.js');
 
@@ -22,7 +25,7 @@ files.forEach(file => {
     bundle: true,
     platform: 'node',
     target: 'node18',
-    format: 'esm',
+    format: format,
     outfile,
     external: ['electron', 'electron-updater', 'fs', 'path', 'os', 'child_process', 'graceful-fs'],
     logLevel: 'info',
