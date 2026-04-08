@@ -57,8 +57,8 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "your-github-username",
-      "repo": "gesturecontrol",
+      "owner": "hayotbek89",
+      "repo": "ekran-kontrol",
       "releaseType": "release"
     },
     "win": {
